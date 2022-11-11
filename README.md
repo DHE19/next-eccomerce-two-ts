@@ -4,7 +4,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 The stack that have been used:
 
-1. *ReactJs* is a Javascript library for building 
+1. *ReactJs* 
+2. *PlanetScale* is a database as a service that is develiped on Vitess
+3. *TailwindCSS* 
+4. *Prisma* is an ORM built for NodeJs and Typescript which handles automated migrations, type-safety, and auto-completion.
+5. *Vercel*  
+6. *Stripe* is payment gageway, and we will use it to accept online payments on the website
 
 ```bash
 npm run dev

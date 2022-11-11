@@ -1,8 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Ecommerce With Nextjs, Tailwind, PlanetScale and Stripe
 
-First, run the development server:
+The stack that have been used:
+
+1. *ReactJs* is a Javascript library for building 
 
 ```bash
 npm run dev

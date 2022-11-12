@@ -1,3 +1,11 @@
+/*This Injects a base style provided by Tailwind*/
+@tailwind base;
+/*This Injects classes and any other classes added by the plugin*/
+@tailwind components;
+/*This Injects hover, focus, responsive, dark mode and any other utilitys added by the plugin*/
+@tailwind utilities;
+
+
 html,
 body {
   padding: 0;

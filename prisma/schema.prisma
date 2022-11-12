@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model Category {
+  id String @id @default(cuid()) //Note: We're using cuid instead of uuid() for the id because they are better for horizontal scaling and sequential lookup performance.
+  name String @unique //Every category will have a unique title
+  createdAt DateTime @default(now()) //The date when a category is added
+  products Product[]//A foreign relationship with the product model
+}
+
+model Product {
+  id String @id @default(cuid())
+  title String @unique // Every product will have a unique title
+  description String //This is just information about the product
+  price String// It's of String type because it will hold  a decimal value
+  quantity Int // It's of Int type because it will hold a numerical value
+  image String //Representation of what product will look like. 
+  createdAt DateTime @default(now()) // The date when a product is added
+  category Category? @relation(fields: [categoryId], references:[id]) //A foreign relationship with the category model.
+  categoryId String?
+}

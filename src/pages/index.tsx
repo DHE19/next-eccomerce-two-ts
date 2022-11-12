@@ -10,7 +10,6 @@ const Home: NextPage = () => {
         <meta name='description' content='All products' />
         <link rel="stylesheet" href="/favicon.ico" />
       </Head>
-
       <main className='container mx-auto'>
         <h1 className='h-1'>Hello</h1>
       </main>
